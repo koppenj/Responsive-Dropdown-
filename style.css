@@ -1,0 +1,179 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  color: #fff;
+  list-style: none;
+}
+
+/* Project Styling */
+body {
+  min-height: 100vh;
+  background: url('./src/machineBG.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+img#logo {
+  max-width: 4rem;
+}
+
+header {
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  padding: 0px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  border-bottom: #333 2px solid;
+  max-height: fit-content;
+}
+
+header #logo {
+  font-weight: bold;
+  font-size: 2rem;
+  color: gainsboro;
+}
+
+#menu-bar {
+  display: none;
+}
+
+header label {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: ghostwhite;
+  display: none;
+}
+
+header nav ul li {
+  position: relative;
+  float: left;
+}
+
+header nav ul li:focus-within > ul,
+header nav ul li:hover > ul {
+  display: initial;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a {
+  display: block;
+  color: ghostwhite;
+  font-size: 1.2rem;
+  padding: 0 10px 0 10px;
+}
+
+header nav ul li a:hover {
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav ul li ul {
+  background-color: #333;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  display: none;
+}
+
+header nav ul li ul li {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header nav ul li ul li ul {
+  left: 200px;
+  top:0;
+}
+
+div#text {
+  position:relative;
+  top: 100px;
+  display: inline-block;
+  font-size: 1.4rem;
+  text-shadow:1px 1px #333;
+}
+
+footer {
+  text-shadow:1px 1px #333;
+  color: #333;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 2.5rem;
+  margin-left: 20px;
+}
+
+@media(max-width:990px) {
+
+  body {
+    margin: 0.25rem;
+  }
+  header {
+    padding: 1.5rem;
+    max-height: 8vh;
+  }
+
+  img#menu-button {
+    max-width: 3rem;
+  }
+
+  header label {
+    display: initial;
+  }
+
+  header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #333;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: none;
+  }
+
+  header nav ul li {
+    width: 100vw;
+  }
+
+  header nav ul li ul {
+    position: relative;
+    width: 100vw;
+  }
+
+  header nav ul li ul li {
+    background:rgb(130, 127, 127);
+  }
+
+  header nav ul li ul li ul {
+    width: 100vw;
+    left: 0;
+  }
+
+  header nav ul li ul li ul li a {
+    background-color: rgb(175, 170, 170);
+  }
+
+  #menu-bar:checked ~ #nav{
+    display: initial;
+    transition: all 1s ease-in-out;
+  }
+
+  header label {
+    margin-right: 10px;
+  }
+}
